@@ -19,13 +19,14 @@ int buttonState = 0;
 void setup() {
   //setup pinouts from Macro definitions
   pinMode(LED_CC_2_5A_EN, OUTPUT);
+  digitalWrite(LED_CC_2_5A_EN, 0); // disabling the LED output right now because it's not working due to short circuit protection logic
   pinMode(SW_DIGITAL, INPUT);
 
 }
 
 void loop() {
   // at first, just test the toggling of the CC converter. Perform some tests under load
-  digitalWrite(LED_CC_2_5A_EN, 1);
+  // digitalWrite(LED_CC_2_5A_EN, 1);
   
 
 }

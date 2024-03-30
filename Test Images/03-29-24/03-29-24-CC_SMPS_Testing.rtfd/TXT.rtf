@@ -31,38 +31,67 @@ Here is the same experiment with a 1Ohm load performed while measuring the input
 \
 \
 Test 2: Then connected the CREE LED to the output which shows a similar result. Except the device shuts down in 750us in this capture. The LED appears to flash very bright and then shut off.\
-{{\NeXTGraphic IMG_4995 Large.jpeg \width25600 \height19200 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic IMG_4995 Large.jpeg \width25600 \height19200 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
 \
 Zooming into the operation point gives us a voltage of 3.28V, which explains the brief flash.\
-{{\NeXTGraphic IMG_4997 Large.jpeg \width25600 \height19200 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic IMG_4997 Large.jpeg \width25600 \height19200 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
 After it shuts down, the voltage slowly decreases through the LED\'92s parasitic resistance. Here we see the voltage at 2.5V, below the forward voltage of the LED.\
-{{\NeXTGraphic IMG_4998 Large.jpeg \width25600 \height19200 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic IMG_4998 Large.jpeg \width25600 \height19200 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
 \
 The following description explains the captures above: 
 \fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Test Results with 3V-3.7V forward Voltage LED:\
+Test Results with 3V-3.7V forward Voltage LED:\
 \pard\pardeftab720\partightenfactor0
 \cf2 From a human perspective, the LED flashes bright for a small fraction of a second after turning on a 4V power supply.\
 1.8V output SS -> 140us transient to 3.3V output for 700us -> 40us fall transient to 2.49V\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
-\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 \cf0 After looking at the data sheet, we see the following description of the short circuit protection. This is consistent with the behavior we\'92re seeing.\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf0 {{\NeXTGraphic Screenshot 2024-03-29 at 3.53.26â€¯PM.png \width22460 \height5360 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
 \
 The same test is performed while measuring the input VBATT voltage node\
-{{\NeXTGraphic IMG_5003 Large.jpeg \width25600 \height19200 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic IMG_5003 Large.jpeg \width25600 \height19200 \appleattachmentpadding0 \appleembedtype0 \appleaqc
 }¬}{{\NeXTGraphic IMG_5004 Large.jpeg \width25600 \height19200 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
 We can see that the buck boost is in buck operation here.\
 \
 And we can get a closer look at the signal. It appears the device shuts down in a similar 800us timeframe.\
-{{\NeXTGraphic IMG_5005 Large.jpeg \width25600 \height19200 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic IMG_5005 Large.jpeg \width25600 \height19200 \appleattachmentpadding0 \appleembedtype0 \appleaqc
 }¬}{{\NeXTGraphic IMG_5006 Large.jpeg \width25600 \height19200 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}}
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+Upon probing the VFB pin, I discovered that the current sense amplifier is not producing the desired output voltage. \
+{{\NeXTGraphic IMG_5008 Large.jpeg \width25600 \height19200 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+Let us zoom in.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic IMG_5009 Large.jpeg \width25600 \height19200 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}{{\NeXTGraphic IMG_5010 Large.jpeg \width19200 \height25600 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}<-Setup\
+We\'92re looking at 42mV for a 6.71V input. I have a 1.4Ohm load. 6.7V should be like 4.8A. 2.5A should correspond to 1.2V so i shouldnt be seeing 40mV on the feedback pin. *The current sense and amp circuit has 2.5A correspond to 1.2V\
+And indeed, after looking at the data sheet, this amplifier is designed to operate with a 2.5V common mode voltage\'85.\
+{{\NeXTGraphic Screenshot 2024-03-29 at 5.18.20â€¯PM.png \width23440 \height3360 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+This means all hope is not necessarily lost. We may be able to remove this part and put a bigger resistor but will have to deal with it getting kind of hot.\
+}
