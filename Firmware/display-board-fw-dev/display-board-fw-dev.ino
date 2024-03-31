@@ -29,7 +29,7 @@ void setup() {
     for(;;); // Don't proceed, loop forever
   }
   display.clearDisplay();
-  display.drawBitmap(0, 0, fullBattery, SCREEN_WIDTH, SCREEN_HEIGHT, WHITE);
+  display.drawBitmap(0, 0, Lethal_Company_Battery_V2_100, SCREEN_WIDTH, SCREEN_HEIGHT, WHITE);
   display.display();
   delay(5000);
 
@@ -37,7 +37,7 @@ void setup() {
 
 void loop() {
   display.clearDisplay();
-  display.drawBitmap(0, 0, fullBattery, SCREEN_WIDTH, SCREEN_HEIGHT, WHITE);
+  display.drawBitmap(0, 0, Lethal_Company_Battery_V2_100, SCREEN_WIDTH, SCREEN_HEIGHT, WHITE);
   // display.drawBitmap(0, 0, monkeyAnimation[count], 64, 128, WHITE); // for later
   display.display();
   delay(1000);  
