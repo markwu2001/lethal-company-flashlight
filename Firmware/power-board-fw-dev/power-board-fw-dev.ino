@@ -17,6 +17,8 @@
 int buttonState = 0;
 
 void setup() {
+  Serial.begin(115200);
+  Serial.println("Starting Up");
   //setup pinouts from Macro definitions
   pinMode(LED_CC_2_5A_EN, OUTPUT);
   // digitalWrite(LED_CC_2_5A_EN, 0); // disabling the LED output right now because it's not working due to short circuit protection logic
@@ -27,7 +29,8 @@ void setup() {
 }
 
 void loop() {
-  
+  Serial.println("beep");
+  delay(1000);
   
 
 }
