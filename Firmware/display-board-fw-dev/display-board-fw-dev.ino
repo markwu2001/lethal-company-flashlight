@@ -1,9 +1,9 @@
 // Mark Wu 2024
 
 // libraries
-#include <Arduino.h>
-#include <U8g2lib.h> // referenced from Seeed studio: https://wiki.seeedstudio.com/Grove-OLED-Display-0.96-SSD1315/
 #include <Wire.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
 
 // files
 #include "images.h"
@@ -12,23 +12,34 @@
 #define I2C_SDA D4 
 #define I2C_SCL D5 
 // Other defines
-#define SCREEN_WIDTH 128 // OLED display width, in pixels
+#define SCREEN_WIDTH 128 // OLED display width, in pixels Reference: https://mischianti.org/images-to-byte-array-online-converter-cpp-arduino/
 #define SCREEN_HEIGHT 64 // OLED display height, in pixels
 
-// global variables
+// global variables and objects
 
-U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, /* clock=*/ I2C_SCL, /* data=*/ I2C_SDA, /* reset=*/ U8X8_PIN_NONE);  // High speed I2C
+//// Declaration for an SSD1306 display connected to I2C (SDA, SCL pins)
+#define OLED_RESET     -1 // Reset pin # (or -1 if sharing Arduino reset pin)
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
+
 
 void setup() {
   //setup pinouts from Macro definitions
-  u8g2.begin();
+  if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
+    Serial.println(F("SSD1306 allocation failed"));
+    for(;;); // Don't proceed, loop forever
+  }
+  display.clearDisplay();
+  display.drawBitmap(0, 0, fullBattery, SCREEN_WIDTH, SCREEN_HEIGHT, WHITE);
+  display.display();
+  delay(5000);
 
 }
 
 void loop() {
-  u8g2.clearBuffer();                   // clear the internal memory
-  u8g2.drawXBM( 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, fullBatterySSD1315); // draw the full battery bitmap to the display Reference: https://github.com/olikraus/u8g2/wiki/u8g2reference#drawxbm
-  u8g2.sendBuffer();                    // transfer internal memory to the display
+  display.clearDisplay();
+  display.drawBitmap(0, 0, fullBattery, SCREEN_WIDTH, SCREEN_HEIGHT, WHITE);
+  // display.drawBitmap(0, 0, monkeyAnimation[count], 64, 128, WHITE); // for later
+  display.display();
   delay(1000);  
   
 
