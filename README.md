@@ -5,4 +5,4 @@ Lethal Company Flashlight V1 hardware project
 
 # [Power Board V1](https://flux.ai/markwuflux/lethal-company-pro-flashlight-power-board-v1) 
 
-# [Button Board V1](https://edge.flux.ai/markwuflux/lethal-company-pro-flashlight-button-board) 
+# [Button Board V1](https://flux.ai/markwuflux/lethal-company-pro-flashlight-button-board) 
